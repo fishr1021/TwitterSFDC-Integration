@@ -1,0 +1,30 @@
+<template>
+    <form>
+        <lightning-card>
+            <h3 slot="title" class="slds-text-title_bold">
+                <lightning-icon icon-name="standard:client" size="small"></lightning-icon>
+                <span class="slds-m-left_medium" style="font-size:21px">Get Tweet here!!</span>
+            </h3>
+
+            <div class="slds-var-m-around_xx-large lgc-bg">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_2-of-4">
+                        <lightning-input type="text" label="Enter Tweet Id" value={inputval} onchange={changeHandler}></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_3-of-4 btn">
+                        <lightning-button variant="brand-outline" label="Get Tweet" 
+                        title="Primary action with lighter look" onclick={handleClick}
+                        class="slds-m-left_x-small"></lightning-button>
+                    </div>
+                </div>
+                <div class="tweetBdy">
+                    <lightning-textarea name="input1" label="Your Tweet is below"  disabled value={tweetDesc} ></lightning-textarea>
+                </div>
+            </div>
+
+            <div slot="footer">
+               <!--If required add slot-->
+            </div>
+        </lightning-card>
+    </form>
+</template>
